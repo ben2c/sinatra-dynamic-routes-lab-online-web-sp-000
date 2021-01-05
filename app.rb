@@ -10,4 +10,11 @@ class App < Sinatra::Base
    "#{params[:number].to_i*params[:number].to_i}"
  end
 
+ get '/say/:number/:phrase' do
+   num = params[:number].to_i
+   while num > 0
+     "#{params[:phrase]}"
+     num -= 1
+   end
+ end
 end
